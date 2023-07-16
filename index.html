@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+        const room1 = {
+            name: "safari view",
+            rooms: 30,
+            costPerNightAdult: "240"
+        }
+        const room2 = {
+            name: "leopard mansion",
+            rooms: 96,
+            costPerNightAdult: "120"
+        }
+
+        function NationalParkHotels(data){
+            this.name = data.name;
+            this.rooms = data.rooms;
+            this.costPerNightAdult = data.costPerNightAdult;
+            this.summariseHotel = function(){
+                console.log(`A one night stay at the ${this.name} for two adults and two children costs a total of ${this.costPerNightAdult}`);
+            };
+        }
+
+        const hotel1 = new NationalParkHotels(room1);
+        console.log(hotel1);
+        hotel1.summariseHotel();
+        const hotel2 = new NationalParkHotels(room2);
+        console.log(hotel2);
+        hotel2.summariseHotel();
+   </script>
+</body>
+</html>
